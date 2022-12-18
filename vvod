@@ -1,0 +1,17 @@
+def writing_phone_book():
+   global vvod
+   a = 1
+   vvod =[]
+   while a !=0:
+
+       #vvod = input('Введите через пробел: Фамилия, Номер телефона, Комментарий ').split()
+       vvod.append(input('Введите через пробел: Фамилия, Номер телефона, Комментарий '))
+       print('Когда достаточно: введите "1"')
+       if vvod[-1] == '1':
+           a = 0
+           vvod.pop(-1)
+       print(' '.join(map(str, vvod)))
+   return ''.join(map(str, vvod))
+b = writing_phone_book()
+print(b)
+print(type(b))
